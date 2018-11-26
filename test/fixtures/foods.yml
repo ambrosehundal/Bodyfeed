@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  item_name: MyString
+  expiration_date: 2018-11-25
+  protein: 1
+  carbs: 1
+  fats: 1
+  calories: 1
+
+two:
+  item_name: MyString
+  expiration_date: 2018-11-25
+  protein: 1
+  carbs: 1
+  fats: 1
+  calories: 1
