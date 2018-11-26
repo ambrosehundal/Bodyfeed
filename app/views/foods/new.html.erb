@@ -1,0 +1,45 @@
+<h3>Form entering a food item into the database</h3>
+
+
+<%= form_for @food, :url => url_for(:controller => 'foods', :action => 'create') do |form| %>
+    <div class="form-group">
+      <p>
+      <%= form.label :title %><br>
+      <%= form.text_field :item_name %>
+      </p>
+    </div>
+
+    <p>
+      <%= form.label :Expiration_date %><br>
+      <%= form.datetime_field :expiration_date %>
+    </p>
+    
+
+    <p>
+      <%= form.label :Protein %><br>
+      <%= form.number_field :protein %>
+    </p>
+    
+    <p>
+      <%= form.label :Carbs %><br>
+      <%= form.number_field :carbs %>
+    </p>
+
+    <p>
+      <%= form.label :Fats %><br>
+      <%= form.number_field :fats %>
+    </p>
+
+    <p>
+      <%= form.label :Total %><br>
+      <%= form.number_field :calories %>
+    </p>
+
+
+
+    <p>
+    <%= form.submit %>
+    </p>
+    <% end %>
+
+    
