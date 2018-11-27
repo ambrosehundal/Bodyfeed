@@ -5,6 +5,7 @@ class GroceriesController < ApplicationController
 
     def new
         @list = Grocery.new
+        @food = Grocery.foods.build(food_params)
     end
 
     def create
@@ -13,13 +14,17 @@ class GroceriesController < ApplicationController
 
         @list.save
 
-        -#redirect_to article_path(@comment.article)
+        #redirect_to article_path(@comment.article)
     end
 
     private
     
     def list_params
       params.require(:grocery_list).permit(:name, :purchase_date, :cost, :notes)
+    end
+
+    def food_params
+        params.require(:food).permit(:item_name, :expiration_date, :protein, :carbs, :fats, :calories)
     end
 
 

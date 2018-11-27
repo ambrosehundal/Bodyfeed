@@ -1,0 +1,44 @@
+<h3>Form for creating a new grocery list</h3>
+
+
+<%= form_for @list, :url => url_for(:controller => 'groceries', :action => 'create') do |form| %>
+    <div class="form-group">
+      <p>
+      <%= form.label :title %><br>
+      <%= form.text_field :title %>
+      </p>
+    </div>
+
+    <p>
+      <%= form.label :Purchase_date %><br>
+      <%= form.datetime_field :purchase_date %>
+    </p>
+    
+
+    <p>
+      <%= form.label :Total_cost %><br>
+      <%= form.number_field :cost %>
+    </p>
+    
+    <p>
+      <%= form.label :Notes %><br>
+      <%= form.text_field :notes %>
+    </p>
+
+    
+
+
+
+    <p>
+    <%= form.submit %>
+    </p>
+    <% end %>
+
+    <br>
+    <br>
+
+    <p> Add food items to the created list </p>
+
+    <%= render partial: 'foods/new' %>
+
+    

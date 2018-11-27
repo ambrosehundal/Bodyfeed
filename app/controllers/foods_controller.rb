@@ -14,7 +14,7 @@ class FoodsController < ApplicationController
     def create
         @food = Food.new(food_params)
 
-        @list = food.grocery.build(params[:grocery])
+        #@list = food.grocery.build(params[:grocery])
         @food.save
 
         redirect_to :action => 'index'
