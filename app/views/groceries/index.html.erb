@@ -1,0 +1,29 @@
+<br>
+  <br>
+  
+  <h1 style="text-align:center"> Weekly Grocery lists</h1>
+  
+ 
+  <table class="table">
+    <thead>
+      <tr>
+        <th colspan="">Title</th>
+        <th colspan="">Date Purchased</th>
+        <th colspan="">Total Cost</th>
+        <th colspan="">Notes</th>
+      </tr>
+    </thead>
+ 
+    <tbody>
+      <% @lists.each do |f| %>
+        <tr>
+          <td><%= link_to f.title, grocery_path(f) %></td>
+          <td><%= f.purchase_date%></td> 
+          <td><%= f.cost %></td>
+          <td><%= f.notes %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <%= link_to "Create a new list", new_grocery_path %>
