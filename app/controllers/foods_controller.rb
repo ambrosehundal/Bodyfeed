@@ -12,10 +12,13 @@ class FoodsController < ApplicationController
     end
 
     def create
-        @food = Food.new(food_params)
+        @list = Grocery.find(params[:grocery_id])
+
+        @food = @list.foods.create(food_params)
+        #@food = Food.new(food_params)
 
         #@list = food.grocery.build(params[:grocery])
-        @food.save
+        #@food.save
 
         redirect_to :action => 'index'
     end
