@@ -1,47 +1,49 @@
-<h1><%= @list.title %></h1>
-<br>
-<p><%= @list.purchase_date %></p>
-<p><%= @list.cost %></p>
-<p><%= @list.notes%></p>
+<div class="list-body">
+    <h1 class="list-name"><%= @list.title %></h1>
+    <br>
+    <p><%= @list.purchase_date %></p>
+    <p><%= @list.cost %></p>
+    <p><%= @list.notes%></p>
 
-<br>
-<br>
-<section class="section comments">
-    <div class="container">
-        <h2 class="subtitle is-5"><strong><%= @list.foods.count %></strong> Foods</h2>
+    <br>
+    <br>
+    <section class="section comments">
+        <div class="container">
+            <h2 class="subtitle is-5"><strong><%= @list.foods.count %></strong> Foods</h2>
 
         <table class="table">
-    <thead>
-      <tr>
-        <th colspan="">Food Item</th>
-        <th colspan="">Expiration date</th>
-        <th colspan="">Protein</th>
-        <th colspan="">Carbs</th>
-        <th colspan="">Fats</th>
-        <th colspan="">Total calories</th>
-      </tr>
-    </thead>
- 
-    <tbody>
-      <% @list.foods.each do |f| %>
+        <thead>
         <tr>
-          <td><%= f.item_name %></td>
-          <td><%= f.expiration_date%></td> 
-          <td><%= f.protein %></td>
-          <td><%= f.carbs %></td>
-          <td><%= f.fats %></td> 
-          <td><%= f.calories %></td> 
-        
+            <th colspan="">Food Item</th>
+            <th colspan="">Expiration date</th>
+            <th colspan="">Protein</th>
+            <th colspan="">Carbs</th>
+            <th colspan="">Fats</th>
+            <th colspan="">Total calories</th>
         </tr>
-      <% end %>
-    </tbody>
-  </table>
+        </thead>
+    
+        <tbody>
+        <% @list.foods.each do |f| %>
+            <tr>
+            <td><%= f.item_name %></td>
+            <td><%= f.expiration_date%></td> 
+            <td><%= f.protein %></td>
+            <td><%= f.carbs %></td>
+            <td><%= f.fats %></td> 
+            <td><%= f.calories %></td> 
+            
+            </tr>
+        <% end %>
+        </tbody>
+    </table>
 
-        <div class="comment-form">
-            <hr />
-            <h3 class="subtitle is-3">Leave a reply</h3>
-            <%= link_to "Create a Food item", new_grocery_food %>
-             <%= render 'foods/form' %>
+            <div class="comment-form">
+                <hr />
+                <h3 class="subtitle is-3">Leave a reply</h3>
+            
+                <%= render 'foods/form' %>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
+</div>

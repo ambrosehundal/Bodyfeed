@@ -1,3 +1,12 @@
 // Place all the styles related to the Groceries controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.list-body{
+    background-color: darkgreen;
+}
+
+.list-name{
+    text-align: center;
+    font-size: 60px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
