@@ -21,6 +21,9 @@ class GroceriesController < ApplicationController
 
     def show
         @list = Grocery.find(params[:id])
+       # @food = @list.foods.build
+        
+
     
     end
 

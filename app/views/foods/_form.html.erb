@@ -1,0 +1,40 @@
+<%= form_for([@list, @list.foods.build]) do |f| %>
+    
+    <div class="field">
+      <div class="control">
+      <%= f.label :Name %>:
+      <%= f.text_field :item_name %>
+      </div>
+      </div>
+      <br>
+      <p>
+      <%= f.label :Expiration_date %><br>
+      <%= f.datetime_field :expiration_date %>
+    </p>
+    
+
+    <p>
+      <%= f.label :Protein %><br>
+      <%= f.number_field :protein %>
+    </p>
+    
+    <p>
+      <%= f.label :Carbs %><br>
+      <%= f.number_field :carbs %>
+    </p>
+
+    <p>
+      <%= f.label :Fats %><br>
+      <%= f.number_field :fats %>
+    </p>
+
+    <p>
+      <%= f.label :Total %><br>
+      <%= f.number_field :calories %>
+    </p>
+
+      </div>
+    </div>
+    
+    <%= f.submit %>
+    <% end %>
