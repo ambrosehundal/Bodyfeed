@@ -21,10 +21,13 @@ class GroceriesController < ApplicationController
 
     def show
         @list = Grocery.find(params[:id])
-       # @food = @list.foods.build
-        
+        #@food = @list.foods.build(food_params)
+    end
 
-    
+    def destroy
+        @list = Grocery.find(params[:id])
+        @list.destroy
+
     end
 
     private
@@ -33,6 +36,7 @@ class GroceriesController < ApplicationController
       params.require(:grocery).permit(:title, :purchase_date, :cost, :notes)
     end
 
+    
     
 
 

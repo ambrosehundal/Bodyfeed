@@ -1,7 +1,7 @@
 <div class="list-body">
     <h1 class="list-name"><%= @list.title %></h1>
     <br>
-    <p><%= @list.purchase_date %></p>
+    <p style="text-align:center"><%= @list.purchase_date %></p>
     <p><%= @list.cost %></p>
     <p><%= @list.notes%></p>
 
@@ -40,8 +40,7 @@
 
             <div class="comment-form">
                 <hr />
-                <h3 class="subtitle is-3">Leave a reply</h3>
-            
+               
                 <%= render 'foods/form' %>
             </div>
         </div>
