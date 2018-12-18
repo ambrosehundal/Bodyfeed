@@ -10,4 +10,10 @@ class Meetup
     def events
         get_data.parsed_response
     end
+
+    def get_data2
+        self.class.get('/Vibrant-Food-Vibrant-Life/events')
+    end
+
+    
 end
