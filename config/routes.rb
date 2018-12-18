@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  root 'groceries#index'
+  get 'meetup/index'
+
+  root 'meetup/index'
+  #root 'groceries#index'
 
 
   resources :groceries do
