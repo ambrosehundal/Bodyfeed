@@ -13,7 +13,7 @@ gem 'sqlite3'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 
-gem 'bootstrap'
+gem 'bootstrap', '~> 4.0.0'
 
 # gem for api calls on http
 gem 'httparty'

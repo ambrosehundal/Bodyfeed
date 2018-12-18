@@ -3,4 +3,9 @@ class MeetupController < ApplicationController
     @events = Meetup.new.events
     render json: @events
   end
+
+  def show
+    @events = Meetup.new.events
+
+  end
 end

@@ -2,13 +2,13 @@
 
 <h1>Listing Events</h1>
 
-<table>
+<table class="table-bordered">
   <thead>
     <tr>
       <th>Name</th>
-      <th>Address</th>
-      <th>Star rating</th>
-      <th>Accomodation type</th>
+      <th>Status</th>
+      <th>Date</th>
+      <th>Local Time</th>
     </tr>
   </thead>
 
@@ -17,7 +17,8 @@
       <tr>
         <td><%= event["name"] %></td>
         <td><%= event["status"]%></td>
-        <td><%= event["city"] %></td>
+        <td><%= event["local_date"] %></td>
+        <td><%= event["local_time"] %></td>
       </tr>
     <% end %>
   </tbody>
