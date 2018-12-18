@@ -15,7 +15,9 @@ gem 'puma', '~> 3.0'
 
 gem 'bootstrap'
 
-#
+# gem for api calls on http
+gem 'httparty'
+
 gem 'geocoder'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
