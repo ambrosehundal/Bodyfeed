@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   get 'meetup/index'
   get 'meetup/show'
   #root 'meetup#index'
