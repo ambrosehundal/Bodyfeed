@@ -1,0 +1,46 @@
+%br
+%br/
+%h1{style: "text-align:center"} Weekly Grocery lists
+%table.table.table-dark
+  %thead
+    %tr
+      %th{colspan: ""} Title
+      %th{colspan: ""} Date Purchased
+      %th{colspan: ""} Total Cost
+      %th{colspan: ""} Notes
+  %tbody
+    - @lists.each do |f|
+      %tr
+        %td= link_to f.title, grocery_path(f)
+        %td= f.purchase_date
+        %td= f.cost
+        %td= f.notes
+=link_to "Create a new list", new_grocery_path
+%br/
+%br/
+%br/
+%br/
+%br/
+%br/
+
+.row
+  .col-md-8
+    %h1.meetup Meetup Events near me
+    %table.table-bordered.table.table-hover.table-dark.table-marg
+      %thead
+        %tr
+          %th Event Name
+          %th Status
+          %th Date
+          %th Local Time
+          %th Details
+      %tbody
+        - @events.each do |event|
+          %tr
+            %td= event["name"]
+            %td= event["status"]
+            %td= event["local_date"]
+            %td= event["local_time"]
+            %td= link_to event["link"]
+
+    %br/

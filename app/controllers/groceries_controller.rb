@@ -1,6 +1,7 @@
 class GroceriesController < ApplicationController
     def index
         @lists = Grocery.all 
+        @events = Meetup.new.events
     end
 
     def new

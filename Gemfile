@@ -18,6 +18,13 @@ gem 'bootstrap', '~> 4.0.0'
 # gem for api calls on http
 gem 'httparty'
 
+#haml
+gem 'haml'
+
+#devise for user authentication
+gem 'devise'
+
+
 gem 'geocoder'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
