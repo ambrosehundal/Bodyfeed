@@ -119,7 +119,7 @@
               '<h1 id="firstHeading" class="firstHeading">Levi Stadium</h1>'+
               '<div id="bodyContent">'+
               '<p><b>Safeway</b>nis wherenI buy my banans, eggs ansd chicken. Its where I discovered Sriracha Mayo and Garlic bread.  '+
-              ' </p>'+
+              'rock caves and ancient paintings. </p>'+
               '</div>'+
               '</div>';
           var googlepinds = '<div id="content">'+
@@ -141,7 +141,7 @@
           });
   
           var infowindow = new google.maps.InfoWindow({
-            content: safewayString
+            content: contentString
           });
 
           var adda = new google.maps.Marker({
@@ -154,9 +154,9 @@
           });
   
           var marker = new google.maps.Marker({
-            position: safeway,
+            position: levis,
             map: map,
-            title: 'Safeway'
+            title: 'Levis (SF 49ers)'
           });
           marker.addListener('click', function() {
             infowindow.open(map, marker);
