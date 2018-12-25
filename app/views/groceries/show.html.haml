@@ -8,9 +8,12 @@
   %br/
   %section.section.comments
     .container
-      %h2.subtitle.is-5
-        %strong= @list.foods.count
-        Foods
+      - if @list.foods.count == 0
+        %p There are no foods on this list currently
+      - else
+        %h2.subtitle.is-5
+          %strong= @list.foods.count
+          Foods
       %table.table
         %thead
           %tr
