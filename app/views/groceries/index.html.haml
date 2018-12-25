@@ -1,27 +1,31 @@
 %br
 %br/
-%h1{style: "text-align:center"} Weekly Grocery lists
-%table.table.table-dark
-  %thead
-    %tr
-      %th{colspan: ""} Title
-      %th{colspan: ""} Date Purchased
-      %th{colspan: ""} Total Cost
-      %th{colspan: ""} Notes
-  %tbody
-    - @lists.each do |f|
-      %tr
-        %td= link_to f.title, grocery_path(f)
-        %td= f.purchase_date
-        %td= f.cost
-        %td= f.notes
-=link_to "Create a new list", new_grocery_path
-%br/
-%br/
-%br/
-%br/
-%br/
-%br/
+%h1 Weekly Grocery lists
+.row
+  .col-md-8
+    %table.table.table-dark
+      %thead
+        %tr
+          %th{colspan: ""} Title
+          %th{colspan: ""} Date Purchased
+          %th{colspan: ""} Total Cost
+          %th{colspan: ""} Notes
+      %tbody
+        - @lists.each do |f|
+          %tr
+            %td= link_to f.title, grocery_path(f)
+            %td= f.purchase_date
+            %td= f.cost
+            %td= f.notes
+    =link_to "Create a new list", new_grocery_path
+    %br/
+    %br/
+    %br/
+    %br/
+    %br/
+    %br/
+  .col-md-4
+    %h1 Twitter feed
 
 .row
   .col-md-8
