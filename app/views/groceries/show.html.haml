@@ -1,0 +1,34 @@
+.list-body
+  %h1.list-name= @list.title
+  %br/
+  %p{:style => "text-align:center"}= @list.purchase_date
+  %p= @list.cost
+  %p= @list.notes
+  %br/
+  %br/
+  %section.section.comments
+    .container
+      %h2.subtitle.is-5
+        %strong= @list.foods.count
+        Foods
+      %table.table
+        %thead
+          %tr
+            %th{:colspan => ""} Food Item
+            %th{:colspan => ""} Expiration date
+            %th{:colspan => ""} Protein
+            %th{:colspan => ""} Carbs
+            %th{:colspan => ""} Fats
+            %th{:colspan => ""} Total calories
+        %tbody
+          - @list.foods.each do |f|
+            %tr
+              %td= f.item_name
+              %td= f.expiration_date
+              %td= f.protein
+              %td= f.carbs
+              %td= f.fats
+              %td= @total_calories
+      .comment-form
+        %hr/
+        = render 'foods/form'
