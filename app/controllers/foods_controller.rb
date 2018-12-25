@@ -24,7 +24,7 @@ class FoodsController < ApplicationController
     end
     
     def total_cal
-        [protein, carbs, fats].sum
+       @total_calories = [protein, carbs, fats].sum
     end
     private
     
