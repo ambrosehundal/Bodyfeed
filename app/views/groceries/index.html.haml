@@ -25,15 +25,8 @@
     %br/
     %br/
   .col-md-4
-    %h1 Twitter feed
-    %blockquote.twitter-tweet{"data-lang" => "en"}
-      %p{dir: "ltr", lang: "en"}>
-        One of our Christmas morning favorites.
-        %a{href: "https://t.co/5k4vYKyc7h"} https://t.co/5k4vYKyc7h
-      — Muscle &amp; Fitness (@muscle_fitness)
-      %a{href: "https://twitter.com/muscle_fitness/status/1077549682866487296?ref_src=twsrc%5Etfw"} December 25, 2018
+    %a.twitter-timeline{"data-height" => "800", "data-lang" => "en", "data-theme" => "dark", "data-width" => "500", href: "https://twitter.com/delishknowledge?ref_src=twsrc%5Etfw"} Health and Nutrition Tweets
     %script{async: "", charset: "utf-8", src: "https://platform.twitter.com/widgets.js"}
-
 .row
   .col-md-8
     %h1.meetup Meetup Events near me
@@ -55,3 +48,4 @@
             %td= link_to event["link"]
 
     %br/
+
