@@ -1,51 +1,52 @@
 %br
 %br/
-%h1 Weekly Grocery lists
-.row
-  .col-md-8
-    %table.table.table-dark
-      %thead
-        %tr
-          %th{colspan: ""} Title
-          %th{colspan: ""} Date Purchased
-          %th{colspan: ""} Total Cost
-          %th{colspan: ""} Notes
-      %tbody
-        - @lists.each do |f|
+.container-fluid
+  %h1 Bodyfeed
+  .row
+    .col-lg-8
+      %table.table.table-dark
+        %thead
           %tr
-            %td= link_to f.title, grocery_path(f)
-            %td= f.purchase_date
-            %td= f.cost
-            %td= f.notes
-    =link_to "Create a new list", new_grocery_path
-    %br/
-    %br/
-    %br/
-    %br/
-    %br/
-    %br/
-  .col-md-4
-    %a.twitter-timeline{"data-height" => "800", "data-theme" => "dark", "data-width" => "500", href: "https://twitter.com/Armdose82/lists/health-and-nutrition?ref_src=twsrc%5Etfw"} A Twitter List by Armdose82
-    %script{async: "", charset: "utf-8", src: "https://platform.twitter.com/widgets.js"}
-.row
-  .col-md-8
-    %h1.meetup Meetup Events near me
-    %table.table-bordered.table.table-hover.table-dark.table-marg
-      %thead
-        %tr
-          %th Event Name
-          %th Status
-          %th Date
-          %th Local Time
-          %th Details
-      %tbody
-        - @events.each do |event|
+            %th{colspan: ""} Title
+            %th{colspan: ""} Date Purchased
+            %th{colspan: ""} Total Cost
+            %th{colspan: ""} Notes
+        %tbody
+          - @lists.each do |f|
+            %tr
+              %td= link_to f.title, grocery_path(f)
+              %td= f.purchase_date
+              %td= f.cost
+              %td= f.notes
+      =link_to "Create a new list", new_grocery_path
+      %br/
+      %br/
+      %br/
+      %br/
+      %br/
+      %br/
+    .col-lg-3.twitter_list
+      %a.twitter-timeline{"data-height" => "800", "data-theme" => "dark", "data-width" => "500", href: "https://twitter.com/Armdose82/lists/health-and-nutrition?ref_src=twsrc%5Etfw"} A Twitter List by Armdose82
+      %script{async: "", charset: "utf-8", src: "https://platform.twitter.com/widgets.js"}
+  .row
+    .col-lg-6
+      %h1.meetup Meetup Events near me
+      %table.table-bordered.table.table-hover.table-dark.table-marg
+        %thead
           %tr
-            %td= event["name"]
-            %td= event["status"]
-            %td= event["local_date"]
-            %td= event["local_time"]
-            %td= link_to event["link"]
+            %th Event Name
+            %th Status
+            %th Date
+            %th Local Time
+            %th Details
+        %tbody
+          - @events.each do |event|
+            %tr
+              %td= event["name"]
+              %td= event["status"]
+              %td= event["local_date"]
+              %td= event["local_time"]
+              %td= link_to event["link"]
 
-    %br/
+      %br/
 
