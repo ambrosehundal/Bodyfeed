@@ -15,7 +15,7 @@ class Food < ApplicationRecord
     end
     
     def total_cal
-        Food.sum(:fats)
+        Food.pluck(:fats, :protein, :carbs).sum
     end
 
 end
