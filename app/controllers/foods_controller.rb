@@ -22,10 +22,7 @@ class FoodsController < ApplicationController
 
         redirect_to :action => 'index'
     end
-    
-    def total_cal
-       @total_calories = [protein, carbs, fats].sum
-    end
+   
     private
     
     def food_params
