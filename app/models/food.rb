@@ -3,11 +3,11 @@ class Food < ApplicationRecord
 
      
     def protein_cal
-      self.protein.sum
+      self.protein
     end
 
     def carb_cal
-      self.carbs
+      @carbos = self.carbs * 4
     end
 
     def fats_cal
