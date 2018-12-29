@@ -7,7 +7,9 @@ class Food < ApplicationRecord
     end
 
     def carb_cal
-     self.carbs  
+    @carbtotals = Food.all(:select=>"carbs * 4 ")
+    
+    self.carbs
     end
 
     def fats_cal
