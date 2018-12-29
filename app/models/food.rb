@@ -7,11 +7,11 @@ class Food < ApplicationRecord
     end
 
     def carbohydrates
-      self.carbs
+      self.carbs.to_i
     end  
 
     def fats_cal
-      self.fats
+      self.fats.to_i
     end
     
     def total_cal
