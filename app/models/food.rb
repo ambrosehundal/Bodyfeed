@@ -7,7 +7,7 @@ class Food < ApplicationRecord
     end
 
     def carb_cal
-      @carbos = self.carbs * 4
+     self.carbs  
     end
 
     def fats_cal
@@ -15,7 +15,7 @@ class Food < ApplicationRecord
     end
     
     def total_cal
-      Food.pluck(:fats, :protein, :carbs).sum
+      Food.sum("fats*carbs")
     end
 
 end
