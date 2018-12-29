@@ -1,9 +1,21 @@
+
 .list-body
-  %h1.list-name= @list.title
-  %br/
-  %p{:style => "text-align:center"}= @list.purchase_date
-  %p= @list.cost
-  %p= @list.notes
+  %br
+  %br
+  %br
+  .info
+    %h3.list-name
+      Grocery list focus : 
+      = @list.title
+    %br/
+    %p{:style => "text-align:center"}= @list.purchase_date
+    %p
+    %p.list-cost 
+      Total cost this week on groceries: $
+      =@list.cost
+    %p
+      Notes:  
+      =@list.notes
   %br/
   %br/
   %section.section.comments
