@@ -31,6 +31,6 @@
               %td= f.protein
               %td= f.carbs
               %td= f.fats
-              %td= f.carb_cal
+              %td= (f.fats_cal) * 9 
         %hr/
         = render 'foods/form'

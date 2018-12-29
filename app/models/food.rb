@@ -6,18 +6,16 @@ class Food < ApplicationRecord
       self.protein
     end
 
-    def carb_cal
-    @carbtotals = Food.all(:select=>"carbs * 4 ")
-    
-    self.carbs
-    end
+    def carbohydrates
+      self.carbs
+    end  
 
     def fats_cal
       self.fats
     end
     
     def total_cal
-      Food.sum("fats*carbs")
+      Food.sum("carbs*8")
     end
 
 end
