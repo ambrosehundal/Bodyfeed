@@ -3,7 +3,7 @@ class Food < ApplicationRecord
 
      
     def protein_cal
-      self.protein
+      self.protein.to_i
     end
 
     def carbohydrates
@@ -15,7 +15,7 @@ class Food < ApplicationRecord
     end
     
     def total_cal
-      Food.sum("carbs*8")
+      fats_cal * 9 + carbohydrates * 4 + protein_cal * 4
     end
 
 end
