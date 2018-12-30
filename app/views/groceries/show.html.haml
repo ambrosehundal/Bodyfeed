@@ -34,6 +34,7 @@
             %th{:colspan => ""} Protein
             %th{:colspan => ""} Carbs
             %th{:colspan => ""} Fats
+            %th{:colspan => ""} Quantity
             %th{:colspan => ""} Total calories
         %tbody
           - @list.foods.each do |f|
@@ -43,6 +44,7 @@
               %td= f.protein
               %td= f.carbs
               %td= f.fats
-              %td= f.total_cal 
+              %td= f.quantity
+              %td= f.total_cal
         %hr/
         = render 'foods/form'
