@@ -22,6 +22,10 @@ class FoodsController < ApplicationController
 
         redirect_to :action => 'index'
     end
+
+    def edit
+        @food.update(food_params)
+    end
    
     private
     
