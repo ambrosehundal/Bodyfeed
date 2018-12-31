@@ -30,13 +30,19 @@ class FoodsController < ApplicationController
 
     def update
         @food = Food.find(params[:id])
-        @food.update(food_params)
-        redirect_to :action => 'index'
+        if @food.update(food_params)   
+            
+           redirect_to :root    
+           flash[:success] = "food items Updated!"   
+        else  
+           render action: :edit   
+        end   
     end
    
     private
     
     def food_params
-      params.permit(:item_name, :expiration_date, :protein, :carbs, :fats, :quantity)
+      #params.permit(:food)  
+      params.require(:food).permit(:item_name, :expiration_date, :protein, :carbs, :fats, :quantity)
     end
 end
