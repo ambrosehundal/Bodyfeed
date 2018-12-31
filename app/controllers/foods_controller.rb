@@ -24,12 +24,13 @@ class FoodsController < ApplicationController
     end
 
     def edit
+        @food = Food.find params[:id]
         @food.update(food_params)
     end
    
     private
     
     def food_params
-      params.require(:food).permit(:item_name, :expiration_date, :protein, :carbs, :fats, :quantity)
+      params.permit(:item_name, :expiration_date, :protein, :carbs, :fats, :quantity)
     end
 end
