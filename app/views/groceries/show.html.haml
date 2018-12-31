@@ -47,5 +47,9 @@
               %td= f.quantity
               %td= f.total_cal
               %td= link_to "Edit item", edit_grocery_food_path(f)
+              %td= link_to "Delete", edit_grocery_food_path(f), |
+                   :data => {:confirm => "You sure?",  |
+                   :method => "delete"}                |
+
         %hr/
         = render 'foods/form'

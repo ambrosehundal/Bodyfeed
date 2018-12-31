@@ -38,6 +38,13 @@ class FoodsController < ApplicationController
            render action: :edit   
         end   
     end
+
+    def destroy
+        @food = Food.find(params[:id])
+        @food.destroy
+        redirect_to grocery_food_path
+    
+    end
    
     private
     
