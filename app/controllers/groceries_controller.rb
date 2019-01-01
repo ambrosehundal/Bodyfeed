@@ -50,6 +50,8 @@ class GroceriesController < ApplicationController
         @list = Grocery.find(params[:id])
         @list.destroy
 
+        redirect_to :root
+
     end
 
     private
