@@ -28,6 +28,24 @@ class GroceriesController < ApplicationController
         #@food = @list.foods.build(food_params)
     end
 
+    def edit 
+        @list = Grocery.find(params[:id])
+    
+    end
+
+    def update
+        @list = Grocery.find(params[:id])
+        if @list.update(list_params)   
+            
+           redirect_to :root    
+           flash[:success] = "food items Updated!"   
+        else  
+           render action: :edit   
+        end   
+    end
+
+   
+
     def destroy
         @list = Grocery.find(params[:id])
         @list.destroy
