@@ -46,10 +46,8 @@
               %td= f.fats
               %td= f.quantity
               %td= f.total_cal
-              %td= link_to "Edit item", edit_grocery_food_path(f)
-              %td= link_to "Delete", edit_grocery_food_path(f), |
-                   :data => {:confirm => "You sure?",  |
-                   :method => "delete"}                |
+              %td= link_to "Edit item", @food, method: :edit
+              %td= link_to 'Delete', @food, method: :delete, data: { confirm: 'Are you sure?' }               |
 
         %hr/
         = render 'foods/form'

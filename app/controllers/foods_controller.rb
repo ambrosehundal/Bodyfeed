@@ -38,7 +38,8 @@ class FoodsController < ApplicationController
     end
 
     def destroy
-        @food = Food.find(params[:id])
+        @list = Grocery.find(params[:grocery_id])
+        @food = @list.foods.find(params[:id])
         @food.destroy
         redirect_to grocery_food_path
     
@@ -48,6 +49,6 @@ class FoodsController < ApplicationController
     
     def food_params
       #params.permit(:food)  
-      params.require(:food).permit(:item_name, :expiration_date, :protein, :carbs, :fats, :quantity)
+      params.permit(:item_name, :expiration_date, :protein, :carbs, :fats, :quantity)
     end
 end
