@@ -1,0 +1,25 @@
+%br
+%h1{:style => "text-align:center"} Grocery items of the list
+%table.table
+  %thead
+    %tr
+      %th{:colspan => ""} Food Item
+      %th{:colspan => ""} Expiration date
+      %th{:colspan => ""} Protein
+      %th{:colspan => ""} Carbs
+      %th{:colspan => ""} Fats
+      %th{:colspan => ""} Quantity
+      %th{:colspan => ""} Total calories
+  %tbody
+    - @foods.each do |f|
+      %tr
+        %td= f.item_name
+        %td= f.expiration_date
+        %td= f.protein
+        %td= f.carbs
+        %td= f.fats
+        %td= f.quantity
+        %td= f.total_cal
+        %td= link_to "Edit item", @food, method: :edit
+        %td= link_to 'Delete', @food, method: :delete, data: { confirm: 'Are you sure?' }
+        

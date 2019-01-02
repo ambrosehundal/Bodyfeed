@@ -8,17 +8,14 @@ class FoodsController < ApplicationController
     end
 
     def show
-        @food = Food.find(params[:id])
+        #@food = Food.find(params[:id])
+        @food = @list.foods.find(params[:id])
     end
 
     def create
         @list = Grocery.find(params[:grocery_id])
 
         @food = @list.foods.create(food_params)
-        #@food = Food.new(food_params)
-
-        #@list = food.grocery.build(params[:grocery])
-        #@food.save
 
         redirect_to :action => 'index'
     end
@@ -35,7 +32,8 @@ class FoodsController < ApplicationController
            redirect_to :root    
            flash[:success] = "food items Updated!"   
         else  
-           render action: :edit   
+           render action: :edit 
+             
         end   
     end
 
