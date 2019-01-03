@@ -14,13 +14,8 @@ class GroceriesController < ApplicationController
 
     def create
         @list = Grocery.new(list_params)
-        #@comment.article_id = params[:article_id]
-
         @list.save
-
         redirect_to :action => 'index'
-
-        #redirect_to article_path(@comment.article)
     end
 
     def show

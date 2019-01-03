@@ -1,11 +1,11 @@
 class FoodsController < ApplicationController
     def index
-        @list = Grocery.find(params[:id])
+        @list = Grocery.find(params[:grocery_id])
         @foods = @list.foods
     end
 
     def new
-        @list = Grocery.find(params[:grocery_id])
+        @list = Grocery.find(params[:id])
         @food = @list.foods.build
     end
 
@@ -43,8 +43,8 @@ class FoodsController < ApplicationController
     end
 
     def destroy
-        @list = Grocery.find(params[:grocery_id])
-        @food = @list.foods.find(params[:id])
+        @list = Grocery.find(params[:id])
+        @food = @list.foods.find(params[:grocery_id])
         @food.destroy
         redirect_to grocery_food_path
     
