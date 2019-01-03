@@ -13,13 +13,14 @@
   %tbody
     - @foods.each do |f|
       %tr
-        %td= f.item_name
+        %td= link_to f.item_name, grocery_food_path(grocery_id: @list)
         %td= f.expiration_date
         %td= f.protein
         %td= f.carbs
         %td= f.fats
         %td= f.quantity
         %td= f.total_cal
-        %td= link_to "Edit item", @food, method: :edit
+        %td= link_to "E", grocery_food_path(grocery_id: @list)
         %td= link_to 'Delete', @food, method: :delete, data: { confirm: 'Are you sure?' }
+       
         

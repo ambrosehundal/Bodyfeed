@@ -44,6 +44,7 @@
               %td= f.cost
               %td= f.notes
               %td= link_to "Edit item", edit_grocery_path(f)
+              %td= link_to 'Show all', grocery_foods_path(f)
               %td= link_to "Delete", grocery_path(f), |
                 :data => {:confirm => "You sure?",  |
                 :method => "delete"} 
