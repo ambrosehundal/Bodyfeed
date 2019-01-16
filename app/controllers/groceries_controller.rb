@@ -3,8 +3,7 @@ class GroceriesController < ApplicationController
         @lists = Grocery.all 
         @events = Meetup.new.events
     
-    rescue StandardError => e
-        render json: {errors: e.message, status: unprocessable_entity}
+    
     end
 
     def new
