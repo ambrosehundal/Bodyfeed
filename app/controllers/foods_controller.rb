@@ -43,7 +43,7 @@ class FoodsController < ApplicationController
     end
 
     def destroy
-        @list = Grocery.find(params[:id])
+        @list = Grocery.find(params[:grocery])
         @food = @list.foods.find(params[:grocery_id])
         @food.destroy
         redirect_to grocery_food_path

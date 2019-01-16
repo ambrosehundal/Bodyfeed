@@ -24,6 +24,9 @@ gem 'haml'
 #devise for user authentication
 gem 'devise'
 
+#gem for uploading pics
+gem 'paperclip'
+
 
 gem 'geocoder'
 # Use SCSS for stylesheets
