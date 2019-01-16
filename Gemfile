@@ -10,6 +10,10 @@ end
 gem 'rails', '~> 5.2.0'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
+
+# AWS gem
+gem 'aws-sdk-s3', require: false
+
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 
