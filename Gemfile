@@ -32,10 +32,10 @@ gem 'devise'
 gem 'paperclip'
 
 #gem for finding errors easier
-group :development do
-  gem "better_errors"
-  gem "binding_of_caller"
-end
+#group :development do
+#  gem "better_errors"
+#  gem "binding_of_caller"
+#end
 
 gem 'geocoder'
 # Use SCSS for stylesheets

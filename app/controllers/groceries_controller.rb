@@ -12,7 +12,7 @@ class GroceriesController < ApplicationController
     end
 
     def create
-        @list = Grocery.create!(list_params)
+        @list = Grocery.new(list_params)
         @list.save
         redirect_to :action => 'index'
     end
