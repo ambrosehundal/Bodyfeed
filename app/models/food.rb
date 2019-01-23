@@ -19,7 +19,7 @@ class Food < ApplicationRecord
     end
 
     def expired
-      if Date.parse(self.expiration_date) < Date.today
+      if Date.strptime(self.expiration_date) < Date.now
         self.expiration_date = Date.now
       else
         self.expiration_date
