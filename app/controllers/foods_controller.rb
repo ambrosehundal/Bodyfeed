@@ -54,6 +54,6 @@ class FoodsController < ApplicationController
     
     def food_params
       #params.permit(:food)  
-      params.require(:food).permit(:item_name, :expiration_date, :protein, :carbs, :fats, :quantity)
+      params.require(:food).permit(:item_name, :expiration_date, :protein, :carbs, :fats, :quantity, :health_scale)
     end
 end
