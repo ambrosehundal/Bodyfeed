@@ -40,7 +40,7 @@
           - @list.foods.each do |f|
             %tr
               %td= link_to f.item_name, new_grocery_food_path(f)
-              %td= f.expiration_date
+              %td= f.expired
               %td= f.protein
               %td= f.carbs
               %td= f.fats

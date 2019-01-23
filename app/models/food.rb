@@ -18,4 +18,12 @@ class Food < ApplicationRecord
       fats_cal * 9 + carbohydrates * 4 + protein_cal * 4
     end
 
+    def expired
+      if Date.parse(self.expiration_date) < Date.today
+        self.expiration_date = Date.now
+      else
+        self.expiration_date
+      end
+    end
+
 end
