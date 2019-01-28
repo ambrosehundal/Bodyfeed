@@ -39,7 +39,7 @@
         %tbody
           - @lists.each do |f|
             %tr
-              %td= link_to f.title, grocery_path(f)
+              %td= link_to f.expired, grocery_path(f)
               %td= f.purchase_date
               %td= f.cost
               %td= f.notes

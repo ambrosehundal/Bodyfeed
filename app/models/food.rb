@@ -19,7 +19,8 @@ class Food < ApplicationRecord
     end
 
     def expired
-      if ((self.expiration_date - Date.today).to_i < 2.days)
+      @expired = self.expiration_date - Date.today
+      if @expired < 0 
         self.item_name = "Expired food"
         # DO you like
         #flash [:success]  "Expired food"
