@@ -50,7 +50,7 @@ class GroceriesController < ApplicationController
     private
     
     def list_params
-      params.require(:grocery).permit(:title, :purchase_date, :cost, :notes, :receipt)
+      params.require(:grocery).permit(:title, :purchase_date, :cost, :notes)
     end
 
     

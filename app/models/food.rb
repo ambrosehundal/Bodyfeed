@@ -19,12 +19,12 @@ class Food < ApplicationRecord
     end
 
     def expired
-      @expired = self.expiration_date - Date.today
-      if @expired < 0 
-        self.item_name = "Expired food"
-        # DO you like
-        #flash [:success]  "Expired food"
-      end
+      if self.expiration_date && (self.expiration_date < Date.today)
+          self.item_name = "Expired"
+          self.protein = 0
+          self.carbs = 5
+          self.fats = 0   
+      end 
     end
 
 end

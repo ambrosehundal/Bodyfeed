@@ -7,7 +7,7 @@ class Grocery < ApplicationRecord
 
 
 
-    def expired
+    def expired_date
         if self.purchase_date > Date.today
             self.title = "Expired"
         else
