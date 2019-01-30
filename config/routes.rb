@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  get 'receipt/index'
-  get 'receipt/new'
-  get 'receipt/create'
-  get 'receipt/destroy'
+ # get 'receipt/index'
+ # get 'receipt/new'
+ # post 'receipt/create'
+ # get 'receipt/destroy'
   devise_for :users
   get 'meetup/index'
   get 'meetup/show'
