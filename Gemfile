@@ -22,6 +22,9 @@ gem 'bootstrap', '~> 4.0.0'
 # gem for api calls on http
 gem 'httparty'
 
+
+gem 'carrierwave', '~> 0.11.2'
+
 #haml
 gem 'haml'
 
