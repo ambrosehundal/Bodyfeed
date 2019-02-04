@@ -2,13 +2,10 @@ class GroceriesController < ApplicationController
     def index
         @lists = Grocery.all 
         @events = Meetup.new.events
-    
-    
     end
 
     def new
         @list = Grocery.new
-       
     end
 
     def create
@@ -42,9 +39,7 @@ class GroceriesController < ApplicationController
     def destroy
         @list = Grocery.find(params[:id])
         @list.destroy
-
         redirect_to :root
-
     end
 
     private

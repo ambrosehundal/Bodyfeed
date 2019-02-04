@@ -1,7 +1,9 @@
 class FoodsController < ApplicationController
     def index
-        @list = Grocery.find(params[:grocery_id])
-        @foods = @list.foods
+        @list = Grocery.find(params[:id])
+
+       
+        @foods = @list.foods.all 
     end
 
     def new
@@ -12,7 +14,8 @@ class FoodsController < ApplicationController
     def show
        # @food = Food.find(params[:id])
         @list = Grocery.find(params[:id])
-        @food = @list.foods.find(params[:grocery_id])
+        #@list = Grocery.find(params[:grocery_id])
+        @food = @list.foods.find(params[:id])
     end
 
     def create
