@@ -13,18 +13,32 @@ class Food < ApplicationRecord
     def fats_cal
       self.fats.to_i
     end
+
+
+    def quantity_cal
+      self.quantity
+    end
     
-    def total_cal
+    def cals
       fats_cal * 9 + carbohydrates * 4 + protein_cal * 4
     end
 
+    def total_cal
+      quantity_cal * cals
+    end
+
+
+
     def expired
       if self.expiration_date && (self.expiration_date < Date.today)
-          self.item_name = "Expired"
-          self.protein = 0
-          self.carbs = 5
-          self.fats = 0   
+          self.item_name = "Expired!!";
+          #self.protein = 0
+          #self.carbs = 5
+          #self.fats = 0  
+      else
+          self.item_name = self.item_name;
       end 
+
     end
 
 end
