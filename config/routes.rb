@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :foodies
  # get 'receipt/index'
  # get 'receipt/new'
  # post 'receipt/create'

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @foody.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @foody.email %>
+</p>
+
+<%= link_to 'Edit', edit_foody_path(@foody) %> |
+<%= link_to 'Back', foodies_path %>
