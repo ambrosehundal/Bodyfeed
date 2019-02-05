@@ -3,7 +3,7 @@ class FoodMailer < ApplicationMailer
 
 
    def sample_email(foodie)
-        @foodie = foodie
-        mail(to: @foodie.email, subject: 'Foods expiration dates')
+    @foodie = foodie
+    mail(to: @foodie.email, subject: 'Foods expiration dates')
    end
 end
