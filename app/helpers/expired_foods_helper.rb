@@ -1,0 +1,2 @@
+module ExpiredFoodsHelper
+end

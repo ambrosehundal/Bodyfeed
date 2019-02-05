@@ -1,0 +1,32 @@
+<%= form_with(model: fooduser, local: true) do |form| %>
+  <% if fooduser.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(fooduser.errors.count, "error") %> prohibited this fooduser from being saved:</h2>
+
+      <ul>
+      <% fooduser.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :login %>
+    <%= form.text_field :login %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

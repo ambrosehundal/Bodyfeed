@@ -1,0 +1,2 @@
+class ExpiredFood < ApplicationRecord
+end

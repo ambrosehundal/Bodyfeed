@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Expired Foods</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @expired_foods.each do |expired_food| %>
+      <tr>
+        <td><%= expired_food.name %></td>
+        <td><%= expired_food.email %></td>
+        <td><%= link_to 'Show', expired_food %></td>
+        <td><%= link_to 'Edit', edit_expired_food_path(expired_food) %></td>
+        <td><%= link_to 'Destroy', expired_food, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Expired Food', new_expired_food_path %>

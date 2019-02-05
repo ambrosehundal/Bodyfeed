@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Foodusers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Login</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @foodusers.each do |fooduser| %>
+      <tr>
+        <td><%= fooduser.name %></td>
+        <td><%= fooduser.email %></td>
+        <td><%= fooduser.login %></td>
+        <td><%= link_to 'Show', fooduser %></td>
+        <td><%= link_to 'Edit', edit_fooduser_path(fooduser) %></td>
+        <td><%= link_to 'Destroy', fooduser, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Fooduser', new_fooduser_path %>

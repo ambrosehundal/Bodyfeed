@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @fooduser.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @fooduser.email %>
+</p>
+
+<p>
+  <strong>Login:</strong>
+  <%= @fooduser.login %>
+</p>
+
+<%= link_to 'Edit', edit_fooduser_path(@fooduser) %> |
+<%= link_to 'Back', foodusers_path %>
