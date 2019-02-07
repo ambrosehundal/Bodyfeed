@@ -4,7 +4,8 @@ class ExpiredFoodMailer < ApplicationMailer
     layout "mailer"
 
 
-    def mailer(fooduser)
+    def mailer(fooduser, food)
+        @food = food
         @fooduser = fooduser
         mail(to: @fooduser.email, subject: 'I will send the list of expired foods soon',  body: 'something')
     end

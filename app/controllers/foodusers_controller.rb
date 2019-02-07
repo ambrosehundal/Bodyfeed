@@ -28,7 +28,7 @@ class FoodusersController < ApplicationController
 
     respond_to do |format|
       if @fooduser.save
-        ExpiredFoodMailer.mailer(@fooduser).deliver_now
+       
         format.html { redirect_to @fooduser, notice: 'Fooduser was successfully created.' }
         format.json { render :show, status: :created, location: @fooduser }
       else
