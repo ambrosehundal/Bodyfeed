@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'recipes/index'
   resources :foodusers
   resources :expired_foods
   resources :foodies
