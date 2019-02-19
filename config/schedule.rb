@@ -18,3 +18,10 @@
 # end
 
 # Learn more: http://github.com/javan/whenever
+
+ENV['RAILS_ENV'] = "development"
+
+every 1.day, :at => '8:00 am' do
+    rake "expiration:check_date"
+end
+
