@@ -22,6 +22,7 @@
 ENV['RAILS_ENV'] = "development"
 
 every 1.day, :at => '8:00 am' do
+    runner "ExpiredFoodMailer.mailer"
     rake "expiration:check_date"
 end
 
