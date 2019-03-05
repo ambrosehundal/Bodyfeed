@@ -42,4 +42,7 @@ class Food < ApplicationRecord
 
     end
 
+    def self.expired_foods
+      Food.where(is_it_expired: true)
+
 end
