@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_15_072448) do
+ActiveRecord::Schema.define(version: 2019_03_05_045532) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -58,6 +58,7 @@ ActiveRecord::Schema.define(version: 2019_02_15_072448) do
     t.integer "grocery_id"
     t.integer "quantity"
     t.integer "health_scale"
+    t.boolean "is_it_expired", default: false
   end
 
   create_table "foodusers", force: :cascade do |t|

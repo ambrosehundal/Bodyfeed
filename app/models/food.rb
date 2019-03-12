@@ -33,6 +33,7 @@ class Food < ApplicationRecord
       if self.expiration_date && (self.expiration_date < Date.today)
           self.item_name = "Expired!!";
           ExpiredFoodMailer.mailer(@fooduser).deliver_now
+          self.is_it_expired = false
           #self.protein = 0
           #self.carbs = 5
           #self.fats = 0  
@@ -44,5 +45,6 @@ class Food < ApplicationRecord
 
     def self.expired_foods
       Food.where(is_it_expired: true)
+    end
 
 end
