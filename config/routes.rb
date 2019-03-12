@@ -14,6 +14,8 @@ Rails.application.routes.draw do
   devise_for :users
   get 'meetup/index'
   get 'meetup/show'
+  get 'leetcode/index'
+  get 'leetcode/show'
   #root 'meetup#index'
   root 'groceries#index'
   
