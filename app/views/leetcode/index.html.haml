@@ -1,0 +1,22 @@
+ .row
+    .col-lg-6
+      %h1.meetup Meetup Events near me
+      %table.table-bordered.table.table-hover.table-dark.table-marg
+        %thead
+          %tr
+            %th Event Name
+            %th Status
+            %th Date
+            %th Local Time
+            %th Details
+        %tbody
+          - @events.each do |event|
+            %tr
+              %td= event["name"]
+              %td= event["status"]
+              %td= event["local_date"]
+              %td= event["local_time"]
+              %td= link_to event["link"]
+
+      %br/
+

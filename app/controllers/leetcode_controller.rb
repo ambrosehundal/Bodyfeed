@@ -3,11 +3,11 @@ class LeetcodeController < ApplicationController
     #@events = Meetup.new.events
     #render json: @events
     @leetcode = Leetcode.new.events
-    render json: @vibes
+    render json: @leetcode
   end
 
   def show
-    @events = Leetcode.all.events
+    @events = Leetcode.new.events
 
   end
 end
