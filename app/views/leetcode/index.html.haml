@@ -1,6 +1,6 @@
  .row
     .col-lg-6
-      %h1.meetup Meetup Events near me
+      %h1.meetup Leetcode practice sessions  (Mastery)
       %table.table-bordered.table.table-hover.table-dark.table-marg
         %thead
           %tr
@@ -8,7 +8,9 @@
             %th Status
             %th Date
             %th Local Time
-            %th Details
+            %th Venue
+            %th Description
+            %th Link
         %tbody
           - @events.each do |event|
             %tr
@@ -16,6 +18,8 @@
               %td= event["status"]
               %td= event["local_date"]
               %td= event["local_time"]
+              %td= event["venue"]
+              %td= event["description"]
               %td= link_to event["link"]
 
       %br/
