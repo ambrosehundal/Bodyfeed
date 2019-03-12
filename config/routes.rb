@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'leetcode/index'
+  get 'leetcode/show'
+  get 'index/show'
+  get 'index/leetcode'
   get 'recipes/index'
   resources :foodusers
   resources :expired_foods
