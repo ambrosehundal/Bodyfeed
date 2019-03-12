@@ -2,6 +2,7 @@ class GroceriesController < ApplicationController
     def index
         @lists = Grocery.all 
         @events = Meetup.new.events
+        @leetcode = Leetcode.new.coding_events
     end
 
     def new

@@ -2,12 +2,12 @@ class LeetcodeController < ApplicationController
   def index
     #@events = Meetup.new.events
     #render json: @events
-    @leetcode = Leetcode.new.events
+    @leetcode = Leetcode.new.coding_events
     render json: @leetcode
   end
 
   def show
-    @events = Leetcode.new.events
+  #  @leetevents = Leetcode.new.events
 
   end
 end

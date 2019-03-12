@@ -78,5 +78,28 @@
               %td= event["local_time"]
               %td= link_to event["link"]
 
+
       %br/
+
+      %table.table-bordered.table.table-hover.table-dark.table-marg
+        %thead
+          %tr
+            %th Event Name
+            %th Status
+            %th Date
+            %th Local Time
+            %th Venue
+            %th Description
+            %th Link
+        %tbody
+          - @leetcode.each do |event|
+            %tr
+              %td= event["name"]
+              %td= event["status"]
+              %td= event["local_date"]
+              %td= event["local_time"]
+              %td= event["venue"]
+              %td= event["description"]
+              %td= link_to event["link"]
+
 
