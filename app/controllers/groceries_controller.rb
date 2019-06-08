@@ -49,6 +49,18 @@ class GroceriesController < ApplicationController
       params.require(:grocery).permit(:title, :purchase_date, :cost, :notes)
     end
 
+    def expired_date
+        @g = Grocery.find(params[:grocery][:id])
+        if @g.expiry_date > DateTime.now
+        if self.purchase_date > Date.today
+            self.title = "Expired Foods"
+        else
+            self.title = self.title
+
+        end
+
+    end
+
     
     
 

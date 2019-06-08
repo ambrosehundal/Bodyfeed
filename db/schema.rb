@@ -100,7 +100,7 @@ ActiveRecord::Schema.define(version: 2019_03_05_062319) do
   end
 
   create_table "stores", force: :cascade do |t|
-    t.string "title"
+    t.string "title"\
     t.text "address"
     t.float "latitude"
     t.float "longitude"
