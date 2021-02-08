@@ -23,7 +23,7 @@ gem 'bootstrap', '~> 4.0.0'
 gem 'httparty'
 
 
-gem 'carrierwave', '~> 0.11.2'
+gem 'carrierwave', '~> 1.3.2'
 
 #haml
 gem 'haml'
